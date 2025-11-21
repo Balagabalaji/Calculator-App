@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculatorbox">
+            <div class="display">
+                <input type="text" id="inp" class="calculate" readonly>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="buttonrow">
+                <button class="btn action" value="AC">AC</button>
+                <button class="btn action" value="×">×</button>
+                <button class="btn action" value=".">.</button>
+                <button class="btn operator" value="/">/</button>
+            </div>
+            <!-- Row 2 -->
+            <div class="buttonrow">
+                <button class="btn number" value="7">7</button>
+                <button class="btn number" value="8">8</button>
+                <button class="btn number" value="9">9</button>
+                <button class="btn operator" value="*">*</button>
+            </div>
+            <!-- Row 3 -->
+            <div class="buttonrow">
+                <button class="btn number" value="4">4</button>
+                <button class="btn number" value="5">5</button>
+                <button class="btn number" value="6">6</button>
+                <button class="btn operator" value="-">-</button>
+            </div>
+            <!-- Row 4 -->
+            <div class="buttonrow">
+                <button class="btn number" value="1">1</button>
+                <button class="btn number" value="2">2</button>
+                <button class="btn number" value="3">3</button>
+                <button class="btn operator" value="+">+</button>
+            </div>
+            <!-- Row 5 -->
+            <div class="buttonrow">
+                <button class="btn number" value="00">00</button>
+                <button class="btn number" value="0">0</button>
+                <button class="btn operator" id="equal" value="=">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--new Function('return ' + displayy.value);
+                                                                       This dynamically creates a function with the following body:
+                                                                       function() {
+                                                                                return 10+2*5;
+                                                                            }
+                                                                                at the end of code () this paranthesis  indicates Executing the Function 
+                                                                                assigned the result in inputfiled display.value
+                                                                        -->
+
+
+
+
+
+
+
+
+
+<!--
+The reason class.value or id.value didn't work but name worked
+In JavaScript, the document.forms collection automatically recognizes elements with a name attribute.
+Since your <input> has name="displayy", you can access it directly
+This works because name creates a global reference inside a form.
+
+
+If you want to select an element using id, you need document.getElementById():
+Unlike name, the id attribute does not create an automatic reference.
+To access it, you must explicitly use:like this
+let inp = document.getElementById("inp"); 
+inp.value = "123"; // Now it works
+
+-->
+
+
+<!--in calculator istead of this new Function('return ' + displayy.value)();
+  we can use eval method eval(displayy.value)  what ever inside input field it will execute it. but  it is not safe to use because 
+  , it directly executes whatever is inside the input field. A user (or attacker) can type something malicious instead of just numbers.
+-->
+
+
+<!-- why + is using before displaying a number in inputfield
+ <input type="button" value="3" onclick="displayy.value+='3'">
+ if we didn't mention + it means display.value='3';it means we are giving 3 to display in input filed ,when u click 3 again it means again we are displaying that 3 in that same inputfiled ,it means we are not adding another 3 so now when we use += it means + concatenating that string like this for 1st click  '3' ,2nd click '3'+'3' so now display.value='33' 
+-->
